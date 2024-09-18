@@ -12,6 +12,16 @@
     z-index: 1;
 }
 
+.banner2{
+    background-image: url("../img/medico2.jpg");
+    background-position: top center;
+    background-attachment: fixed;
+    padding: 25%;
+    position: relative;
+    z-index: 1;
+}
+
+
 .banner::after{
     content: "";
     position: absolute;
