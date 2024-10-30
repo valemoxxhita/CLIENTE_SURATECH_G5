@@ -39,6 +39,18 @@ let pacientes=[
     },
     {
         id: 893,
+        nombre: "Lucía Martínez Gómez",
+        anioNacimiento: "1990-04-15",
+        ciudad: "Medellín",
+        correo: "lucia.martinez@email.com",
+        telefono: "3001234567",
+        ips: "Clinica Salud",
+        poliza: false,
+        grupoIngresos: "B",
+        fechaAfiliacion: "2015-08-10"
+    },    
+    {
+        id: 893,
         nombre: "Laura Isabel Martinez",
         anioNacimiento: "1990-09-08",
         ciudad: "Barranquilla",
@@ -66,10 +78,34 @@ pacientes.forEach(function(paciente){
     //6. Se crean una etiqueta para poner el nombre del paciente
     let nombre = document.createElement("h2")
     nombre.textContent=paciente.nombre
+    let anioNacimiento = document.createElement("p")
+    anioNacimiento.textContent=paciente.anioNacimiento
+    let ciudad = document.createElement("p")
+    ciudad.textContent=paciente.ciudad
+    let correo = document.createElement("p")
+    correo.textContent=paciente.correo
+    let telefono = document.createElement("p")
+    telefono.textContent=paciente.telefono
+    let ips = document.createElement("p")
+    ips.textContent=paciente.ips
+    let poliza = document.createElement("p")
+    poliza.textContent=paciente.poliza
+    let grupoIngresos = document.createElement("p")
+    grupoIngresos.textContent=paciente.grupoIngresos
+    let fechaAfiliacion = document.createElement("p")
+    fechaAfiliacion.textContent=paciente.fechaAfiliacion
     //Paso final (Ordenar las cartas)
     tarjeta.appendChild(nombre)
+    tarjeta.appendChild(anioNacimiento)
+    tarjeta.appendChild(ciudad)
+    tarjeta.appendChild(correo)
+    tarjeta.appendChild(telefono)
+    tarjeta.appendChild(ips)
+    tarjeta.appendChild(poliza)
+    tarjeta.appendChild(grupoIngresos)
+    tarjeta.appendChild(fechaAfiliacion)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 
-})
+});
 

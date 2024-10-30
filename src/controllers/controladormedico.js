@@ -12,6 +12,7 @@ let botonRegistromedico = document.getElementById("buttonregistromedico")
 
 botonRegistromedico.addEventListener("click", function(evento){
     evento.preventDefault()
+    //Primero, se escribe el nombre del dato cómo está en el back, luego el id del form
     let datosFormularioMedico ={
         nombre:nombremedico.value,
         matriculaProfesional:matriculamedico.value,
