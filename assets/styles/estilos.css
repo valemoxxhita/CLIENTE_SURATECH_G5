@@ -7,7 +7,7 @@
     background-position: top center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 25%;
+    padding: 23%;
     position: relative;
     z-index: 1;
 }
@@ -33,4 +33,26 @@
     opacity: 0.5;
     z-index: -1;
 
+}
+
+body, main{
+    font-family: "DM Sans", sans-serif;
+}
+
+.section2{
+    background-color: #0033A0;
+}
+
+.tigreCorona{
+   position: relative;
+   top: 28px;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+nav {
+    margin: 0;
+    padding: 0;
 }

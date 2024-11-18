@@ -16,7 +16,7 @@ let medicamentos =
             dosis: "1 tableta cada 6 horas",
             laboratorio: "Laboratorios XYZ",
             fechaCaducidad: "2024-05-30",
-            contraIndicaciones: ["Úlceras gástricas", "Insuficiencia renal"],
+            contraIndicaciones: ["Úlceras gástricas", " Insuficiencia renal"],
             registroInvima: "67890-FGHIJ",
             copago: 1500
         },
@@ -36,7 +36,7 @@ let medicamentos =
             dosis: "1 tableta diaria",
             laboratorio: "Laboratorios DEF",
             fechaCaducidad: "2024-09-01",
-            contraIndicaciones: ["Embarazo", "Lactancia"],
+            contraIndicaciones: ["Embarazo", " Lactancia"],
             registroInvima: "09876-PQRST",
             copago: 1000
         },

@@ -1,35 +1,35 @@
 let enfermedades = [
         {
             nombre: "Juan Pérez",
-            sintomas: ["Fiebre", "Tos", "Fatiga"],
+            sintomas: ["Fiebre", " Tos", " Fatiga"],
             clasificacion: "Moderado",
             grado: "Grado 2",
             probabilidadDeVida: "vive"
         },
         {
             nombre: "María Gómez",
-            sintomas: ["Dolor de cabeza", "Náuseas", "Confusión"],
+            sintomas: ["Dolor de cabeza"," Náuseas", " Confusión"],
             clasificacion: "Grave",
             grado: "Grado 3",
             probabilidadDeVida: "muere"
         },
         {
             nombre: "Carlos Sánchez",
-            sintomas: ["Dolor en el pecho", "Dificultad para respirar"],
+            sintomas: ["Dolor en el pecho", " Dificultad para respirar"],
             clasificacion: "Crítico",
             grado: "Grado 4",
             probabilidadDeVida: "muere"
         },
         {
             nombre: "Ana López",
-            sintomas: ["Cansancio extremo", "Pérdida de apetito"],
+            sintomas: ["Cansancio extremo", " Pérdida de apetito"],
             clasificacion: "Leve",
             grado: "Grado 1",
             probabilidadDeVida: "vive"
         },
         {
             nombre: "Luis Martínez",
-            sintomas: ["Mareos", "Dolor abdominal", "Sudoración"],
+            sintomas: ["Mareos"," Dolor abdominal"," Sudoración"],
             clasificacion: "Moderado",
             grado: "Grado 2",
             probabilidadDeVida: "vive"
