@@ -1,36 +1,13 @@
-let signosVitales =
-[
-    {
-        nombre: "Temperatura",
-        valor: "38°C",
-        fechaMedida: "2024-09-19"
-    },
-    {
-        nombre: "Presión arterial",
-        valor: "120/80 mmHg",
-        fechaMedida: "2024-09-20"
-    },
-    {
-        nombre: "Frecuencia cardíaca",
-        valor: "75 bpm",
-        fechaMedida: "2024-09-21"
-    },
-    {
-        nombre: "Nivel de glucosa",
-        valor: "90 mg/dL",
-        fechaMedida: "2024-09-22"
-    },
-    {
-        nombre: "Oxígeno en sangre",
-        valor: "98%",
-        fechaMedida: "2024-09-23"
-    }
-]
-//2. Crear una referencia a una etiqueta html donde vamos a renderizar
-let fila = document.getElementById("fila")
+import {buscarSignosVitales} from "../../services/serviciosSignoVital.js"
 
+//1. Llamar al api
+    buscarSignosVitales()
+    .then(function(respuestaBackEnd){
+    console.log(respuestaBackEnd)
+//2. Crear una referencia a una etiqueta html donde vamos a renderizar
+    let fila = document.getElementById("fila")
 //3. Se recorren los datos para obtenerlos de forma separada
-signosVitales.forEach(function(signoVital){
+    respuestaBackEnd.forEach(function(signoVital){
     console.log(signoVital)
     //4. Se crean columnas
     let columna=document.createElement("div")
@@ -52,3 +29,4 @@ signosVitales.forEach(function(signoVital){
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 });
+})

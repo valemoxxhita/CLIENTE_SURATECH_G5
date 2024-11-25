@@ -1,60 +1,10 @@
-let medicamentos = 
-    [
-        {
-            nombre: "Paracetamol",
-            presentacion: "Tabletas 500 mg",
-            dosis: "1-2 tabletas cada 8 horas",
-            laboratorio: "Laboratorios ABC",
-            fechaCaducidad: "2025-12-31",
-            contraIndicaciones: ["Hipersensibilidad al paracetamol"],
-            registroInvima: "12345-ABCDE",
-            copago: 2000
-        },
-        {
-            nombre: "Ibuprofeno",
-            presentacion: "Tabletas 400 mg",
-            dosis: "1 tableta cada 6 horas",
-            laboratorio: "Laboratorios XYZ",
-            fechaCaducidad: "2024-05-30",
-            contraIndicaciones: ["Úlceras gástricas", " Insuficiencia renal"],
-            registroInvima: "67890-FGHIJ",
-            copago: 1500
-        },
-        {
-            nombre: "Amoxicilina",
-            presentacion: "Cápsulas 500 mg",
-            dosis: "1 cápsula cada 8 horas",
-            laboratorio: "Laboratorios 123",
-            fechaCaducidad: "2026-03-15",
-            contraIndicaciones: ["Alergia a penicilinas"],
-            registroInvima: "54321-KLMNO",
-            copago: 2500
-        },
-        {
-            nombre: "Loratadina",
-            presentacion: "Tabletas 10 mg",
-            dosis: "1 tableta diaria",
-            laboratorio: "Laboratorios DEF",
-            fechaCaducidad: "2024-09-01",
-            contraIndicaciones: ["Embarazo", " Lactancia"],
-            registroInvima: "09876-PQRST",
-            copago: 1000
-        },
-        {
-            nombre: "Omeprazol",
-            presentacion: "Cápsulas 20 mg",
-            dosis: "1 cápsula diaria",
-            laboratorio: "Laboratorios GHI",
-            fechaCaducidad: "2025-11-20",
-            contraIndicaciones: ["Fracturas óseas previas"],
-            registroInvima: "11223-UVWXY",
-            copago: 3000
-        }
-    ]
+import {buscarMedicamentos} from "../../services/serviciosMedicamento.js"
 
-let fila = document.getElementById("fila")
-
-medicamentos.forEach(function(medicamento){
+    buscarMedicamentos()
+    .then(function(respuestaBackEnd){
+    console.log(respuestaBackEnd)
+    let fila = document.getElementById("fila")
+    respuestaBackEnd.forEach(function(medicamento){
     console.log(medicamento)
     let columna=document.createElement("div")
     columna.classList.add("col")
@@ -88,3 +38,4 @@ medicamentos.forEach(function(medicamento){
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 });
+})
