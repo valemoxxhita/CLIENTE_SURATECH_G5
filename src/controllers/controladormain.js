@@ -1,3 +1,5 @@
+import {registrarInformacion} from "../../services/serviciosMain.js"
+
 let d = document;
 let botonMain = d.querySelector(".botonIndex");
 let nombre = d.querySelector(".nombre");
@@ -30,11 +32,16 @@ botonMain.addEventListener("click",function(evento){
         direccion:direccion.value,
         residencia:residencia.value
     }
-
+    registrarInformacion(datosFormularioRegistro)
+    .then(function(respuestaBackEnd){
     console.log(datosFormularioRegistro)
     Swal.fire({
-        title: "¡Registro Exitoso!",
-        text: "Los datos han sido registrados correctamente.",
+        title: "Bienvenido!",
+        text: "Ya eres parte de SuraTech",
         icon: "success"
-      });
-})
+    }).then(() => {
+        window.location.href = "../index.html";
+    });
+});
+});
+

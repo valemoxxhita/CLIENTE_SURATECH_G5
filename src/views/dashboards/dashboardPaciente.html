@@ -11,24 +11,62 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../../../assets/img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../assets/styles/estilos.css">
+    <link rel="stylesheet" href="../../../assets/styles/dashboard.css">
+    <style>
+
+        body {
+        background-image: url('/assets/img/blurbg1.jpg');
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #5c87e2;
+            padding-top: 20px;
+            z-index: 1;
+        }
+
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            background-color: #4b70a0;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .sidenav .active {
+            background-color: #4b70a0;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <h1 class="m-2 mt-4 text-center mb-0" style="color: #0033A0; font-size: 4rem;">— Pacientes —</h1>
-        <section class="container my-5">
-            <div class="row">
-                <div class="col-12 col-md-9 border rounded p-5 shadow">
-									<h4>Profesional de salud: </h4>
-									<p>Hasta la fecha la APP registra <span class="fw-bold">1432936</span> usuarios</p>
-									<i class="bi bi-person-fill fs-1"></i>
-									<i class="bi bi-person mx-3 fs-1"></i>
-									<i class="bi bi-person-fill fs-1"></i>
-                </div>
-								<div class="col-12 col-md-3">
-									<img src="../../../assets/img/tigreLogo.webp" alt="" class="img-fluid">
-								</div>
-            </div>
-        </section>
+    <div class="sidenav">
+        <h1 class="text-white text-center fs-1"><i class="bi bi-person-circle"></i>&nbsp;Pacientes<strong></strong></h1>
+        <hr>
+        <br>
+        <h2 class="text-white text-center"><i class="bi bi-list"></i>&nbsp;Menú</h2>
+        <br>
+        <a href="../../../index.html"> <i class="bi bi-house"></i>&nbsp;&nbsp;&nbsp;Inicio</a>
+        <a href="#" class="active"><i class="bi bi-speedometer2"></i>&nbsp;&nbsp;&nbsp;Dashboard</a>
+        <a href="../paciente.html"><i class="bi bi-ui-checks"></i>&nbsp;&nbsp;&nbsp;Registrar Pacientes</a>
+    </div>
+    <main class="main-content">
+        <div style="background-color: #1148be9e; padding: 40px; margin-bottom: 20px;">
+            <h1 class="m-2 mt-4 text-center mb-0" style="color: #ffffff; font-size: 4rem;">— Control de pacientes — <img src="../../../assets/img/paciente.webp" width="60px" alt=""></h1>
+            <p class="mt-0 text-center mb-5" style="font-size: 20px;">Consulte aquí información sobre sus pacientes asignados.</p>
+        </div>
         <section class="container">
             <div class="row row-cols-1 row-cols-md-3 mb-5 g-5" id="fila">
                 

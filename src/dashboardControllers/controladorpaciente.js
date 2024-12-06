@@ -14,7 +14,7 @@ import {buscarPacientes} from "../../services/serviciosPaciente.js"
     columna.classList.add("col")
     //5. Se crean tarjetas
     let tarjeta = document.createElement("div")
-    tarjeta.classList.add("card","p-5","h-100","shadow")
+    tarjeta.classList.add("card","p-5","h-100","shadow", "bordepersonalizado")
     //6. Se crean una etiqueta para poner el nombre del paciente
     let nombre = document.createElement("h2")
     nombre.textContent=paciente.nombre

@@ -10,8 +10,7 @@ import {buscarMedicos} from "../../services/serviciosMedico.js"
     let columna=document.createElement("div")
     columna.classList.add("col")
     let tarjeta = document.createElement("div")
-    tarjeta.classList.add("card","p-5","h-100","shadow")
-    
+    tarjeta.classList.add("card","p-5","h-100","shadow", "bordepersonalizado")
     let nombre = document.createElement("h2")
     nombre.textContent=medico.nombre
     let matriculaProfesional = document.createElement("p")

@@ -4,6 +4,7 @@
 //2 por cada variable debo utilizar el DOM para asociar 
 //el html con javascript 
 
+import {registrarPaciente} from "../../services/serviciosPaciente.js"
 
 let nombrePaciente=document.getElementById("nombrepaciente")
 let correoPaciente=document.getElementById("correopaciente")
@@ -30,7 +31,7 @@ botonRegistroPaciente.addEventListener("click",function(evento){
         correo:correoPaciente.value,
         telefono:telefonoPaciente.value,
         ips:ipsPaciente.value,
-        poliza:polizaPaciente.value,
+        poliza: true,
         grupoIngresos:grupoIngresoPaciente.value,
         fechaAfiliacion:fechaAfiliacionPaciente.value
     }
@@ -38,11 +39,15 @@ botonRegistroPaciente.addEventListener("click",function(evento){
     //6. Se envían los datos al back
 
     console.log(datosFormularioPaciente)
+    registrarPaciente(datosFormularioPaciente)
+    .then(function(respuestaBackEnd){
 
     Swal.fire({
         title: "¡Registro Exitoso!",
         text: "Los datos han sido registrados correctamente.",
         icon: "success"
-      });
-})
-      
+    }).then(() => {
+        window.location.href = "../views/dashboards/dashboardPaciente.html";
+    });
+});
+});

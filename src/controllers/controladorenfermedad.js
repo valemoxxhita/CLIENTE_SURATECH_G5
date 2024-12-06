@@ -3,6 +3,7 @@
 //1. por cada input, select, textarea del formulario se crea una variable 
 //2 por cada variable debo utilizar el DOM para asociar 
 //el html con javascript 
+import {registrarEnfermedad} from "../../services/serviciosEnfermedad.js"
 
 let nombreEnfermedad=document.getElementById("nombreenfermedad")
 let sintomasEnfermedad=document.getElementById("sintomasenfermedad")
@@ -29,10 +30,15 @@ botonRegistroEnfermedad.addEventListener("click",function(evento){
     //6. Se envían los datos al back
 
     console.log(datosFormularioEnfermedad)
-
+    registrarEnfermedad(datosFormularioEnfermedad)
+    .then(function(respuestaBackEnd){
     Swal.fire({
-        title: "¡Registro Exitoso!",
-        text: "Los datos han sido registrados correctamente.",
-        icon: "success"
-      });
-})
+            title: "¡Registro Exitoso!",
+            text: "Los datos han sido registrados correctamente.",
+            icon: "success"
+
+        }).then(() => {
+            window.location.href = "../views/dashboards/dashboardEnfermedad.html";
+        });
+    });
+});

@@ -8,3 +8,15 @@ export async function buscarSignosVitales(){
     return signosVitales
 }
 
+export async function registrarSignoVital(datosSignoVital){
+    const URL = "http://localhost:8080/api/signovital"
+    let peticion={
+        method: "POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(datosSignoVital)
+    }
+    let respuestaInicial = await fetch(URL, peticion)
+    let respuestaFinal = await respuestaInicial.json();
+    return respuestaFinal
+}
+

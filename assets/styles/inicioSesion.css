@@ -1,0 +1,133 @@
+body {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color:#0033A0;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    font-family: "DM Sans", serif !important;
+}
+input, textarea
+{
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0033A0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+    text-align: left;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+input:focus {
+    border-color: #0033A0;
+    outline: none;
+}
+
+label::selection,
+button::selection,
+h2::selection,
+span::selection,
+a::selection,
+p::selection,
+input::selection
+
+{
+    color: white;
+    background-color: #0033A0;
+}
+
+#boton1 {
+    padding: 10px;
+    background-color:#0033A0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    font-size: 16px !important;
+    margin: 10px !important;
+    margin-top: 1rem !important;
+}
+
+#boton2
+{
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    background-color: transparent;
+}
+#boton1:hover 
+{
+    transform: scale(1.3);
+    text-decoration: underline;
+}
+
+#boton2:hover
+{
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+a
+{
+    text-decoration: none;
+    color: #0033A0;
+    font-weight: bolder;
+}
+.regresar, #boton2{
+    color: #0033A0;
+}
+#boton2{
+    color: black;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}

@@ -1,8 +1,4 @@
-//OBJETIVO: Capturar los datos de un formulario 
-
-//1. por cada input, select, textarea del formulario se crea una variable 
-//2 por cada variable debo utilizar el DOM para asociar 
-//el html con javascript 
+import {registrarMedicamento} from "../../services/serviciosMedicamento.js"
 
 let nombreMedicamento=document.getElementById("nombremedicamento")
 let presentacionMedicamento=document.getElementById("presentacionmedicamento")
@@ -24,22 +20,26 @@ botonRegistromedicamento.addEventListener("click",function(evento){
 
     let datosFormularioMedicamento ={
         nombre:nombreMedicamento.value,
-        presentacion:presentacionmedicamento.value,
-        dosis:dosismedicamento.value,
-        laboratorio:laboratoriomedicamento.value,
-        fechaCaducidad:caducidadmedicamento.value,
-        contraIndicaciones:indicacionesmedicamento.value,
-        registroInvima:registromedicamento.value,
-        copago:copagomedicamento.value
+        presentacion:presentacionMedicamento.value,
+        dosis:dosisMedicamento.value,
+        laboratorio:laboratorioMedicamento.value,
+        fechaCaducidad:fechaCaducidadMedicamento.value,
+        contraIndicaciones:contraIndicacionesMedicamento.value,
+        registroInvima:registroMedicamento.value,
+        copago:true
     }
 
     //6. Se envían los datos al back
 
     console.log(datosFormularioMedicamento)
-
+    registrarMedicamento(datosFormularioMedicamento)
+    .then(function(respuestaBackEnd){
     Swal.fire({
-        title: "¡Registro Exitoso!",
-        text: "Los datos han sido registrados correctamente.",
-        icon: "success"
-      });
-})
+            title: "¡Registro Exitoso!",
+            text: "Los datos han sido registrados correctamente.",
+            icon: "success"
+        }).then(() => {
+            window.location.href = "../views/dashboards/dashboardMedicamento.html";
+        });
+    });
+});

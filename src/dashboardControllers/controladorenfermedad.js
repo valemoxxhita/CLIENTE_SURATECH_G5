@@ -1,5 +1,6 @@
 import {buscarEnfermedades} from "../../services/serviciosEnfermedad.js"
 
+let modal = document.querySelector(".modal-body");
     buscarEnfermedades()
     .then(function(respuestaBackEnd){
     console.log(respuestaBackEnd)
@@ -9,8 +10,8 @@ import {buscarEnfermedades} from "../../services/serviciosEnfermedad.js"
     let columna=document.createElement("div")
     columna.classList.add("col")
     let tarjeta = document.createElement("div")
-    tarjeta.classList.add("card","p-5","h-100","shadow")
-    let nombre = document.createElement("h2")
+    tarjeta.classList.add("card","p-5","h-100","rounded", "w-100","bordepersonalizado")
+    let nombre = document.createElement("h1")
     nombre.textContent=enfermedad.nombre
     let sintomas = document.createElement("p")
     sintomas.textContent=enfermedad.sintomas
@@ -20,7 +21,6 @@ import {buscarEnfermedades} from "../../services/serviciosEnfermedad.js"
     grado.textContent=enfermedad.grado
     let probabilidadDeVida = document.createElement("p")
     probabilidadDeVida.textContent=enfermedad.probabilidadDeVida
-    
     tarjeta.appendChild(nombre)
     tarjeta.appendChild(sintomas)
     tarjeta.appendChild(clasificacion)

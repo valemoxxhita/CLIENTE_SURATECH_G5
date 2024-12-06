@@ -9,8 +9,8 @@ import {buscarMedicamentos} from "../../services/serviciosMedicamento.js"
     let columna=document.createElement("div")
     columna.classList.add("col")
     let tarjeta = document.createElement("div")
-    tarjeta.classList.add("card","p-5","h-100","shadow")
-    let nombre = document.createElement("h2")
+    tarjeta.classList.add("card","p-5","h-100","rounded", "w-100","bordepersonalizado")
+    let nombre = document.createElement("h1")
     nombre.textContent=medicamento.nombre
     let presentacion= document.createElement("p")
     presentacion.textContent=medicamento.presentacion
@@ -26,7 +26,6 @@ import {buscarMedicamentos} from "../../services/serviciosMedicamento.js"
     registroInvima.textContent=medicamento.registroInvima
     let copago = document.createElement("p")
     copago.textContent=medicamento.copago
-
     tarjeta.appendChild(nombre)
     tarjeta.appendChild(presentacion)
     tarjeta.appendChild(dosis)
